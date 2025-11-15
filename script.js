@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('isLoggedIn', 'true');
                 loginMessage.textContent = 'Login berhasil! Mengalihkan...';
                 loginMessage.style.color = '#4CAF50';
-                window.location.href = 'Dashboard.html';
+                window.location.href = 'dashboard.html';
             } else {
                 loginMessage.textContent = 'Nama pengguna atau kata sandi salah.';
                 loginMessage.style.color = '#ee6c4d';
@@ -98,3 +98,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
