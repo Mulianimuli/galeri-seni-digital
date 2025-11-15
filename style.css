@@ -1,0 +1,189 @@
+/* Palet Warna Modern */
+:root {
+    --color-primary: #3d5a80;     /* Biru Laut Tua (Deep Ocean Blue) - header & penting */
+    --color-accent: #98c1d9;      /* Biru Muda Cerah (Sky Blue) - tombol & hover */
+    --color-background: #e0fbfc;  /* Mint Cerah (Light Mint) - latar belakang lembut */
+    --color-surface: #ffffff;     /* Putih Bersih - latar belakang kartu/konten */
+    --color-text: #293241;        /* Biru Gelap - teks utama */
+    --color-shadow: rgba(41, 50, 65, 0.1); /* Bayangan Lembut */
+}
+
+/* Styling Dasar */
+body {
+    font-family: Arial, sans-serif; /* Ganti dengan Poppins jika Anda punya */
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* --- Shadow Trend: Bayangan Lembut --- */
+.card-shadow {
+    box-shadow: 0 4px 12px var(--color-shadow);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-shadow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px var(--color-shadow);
+}
+
+/* --- Halaman Login (index.html) --- */
+.login-container {
+    max-width: 400px;
+    margin: 15vh auto;
+    padding: 40px;
+    background-color: var(--color-surface);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px var(--color-shadow);
+    text-align: center;
+}
+
+.form-group { margin-bottom: 20px; text-align: left;}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Tombol Modern */
+button {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-1px);
+}
+
+.error-message {
+    color: #ee6c4d;
+    margin-top: 15px;
+}
+
+/* --- Halaman Dashboard (dashboard.html) --- */
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px var(--color-shadow);
+    position: sticky; /* Agar header menempel saat scroll */
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+.header .logo { font-size: 1.8em; font-weight: 700; }
+
+.header nav a {
+    color: var(--color-surface);
+    text-decoration: none;
+    margin-left: 30px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.header nav a:hover { background-color: var(--color-accent); color: var(--color-text); }
+
+.dashboard-content {
+    display: flex;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: var(--color-surface);
+    padding: 25px;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.gallery {
+    flex: 3;
+    padding: 25px;
+    background-color: var(--color-surface);
+    border-radius: 12px;
+}
+
+.artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.artwork-item {
+    background-color: #f7f7f7;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.artwork-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.artwork-info { padding: 15px; text-align: left; }
+.artwork-info h3 { margin: 0 0 5px 0; font-size: 1.1em; color: var(--color-primary); }
+.artwork-info p { margin: 0; font-size: 0.9em; color: #666; }
+.upload-btn { margin-top: 20px; background-color: #ee6c4d; }
+.upload-btn:hover { background-color: #f78d73; }
+
+/* --- Bagian Tentang (About) --- */
+.about-us-container {
+    flex: 3;
+    padding: 35px;
+    background-color: var(--color-surface);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--color-shadow);
+}
+.about-title { border-bottom: 3px solid var(--color-accent); padding-bottom: 10px; margin-bottom: 25px; }
+.about-subtitle { margin-top: 30px; }
+
+/* --- Fungsionalitas Navbar (JS Class) --- */
+.hidden-section {
+    display: none !important;
+}
+
+.header.scrolled {
+    background-color: var(--color-surface); 
+    box-shadow: 0 4px 15px var(--color-shadow); 
+    padding: 15px 40px; 
+}
+
+.header.scrolled .logo,
+.header.scrolled nav a {
+    color: var(--color-primary); 
+}
+
+.header.scrolled nav a:hover {
+    background-color: var(--color-accent); 
+    color: var(--color-text);
+}
